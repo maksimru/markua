@@ -86,15 +86,12 @@ class Aside extends AbstractBlock
     }
 
     /**
-     * @param Cursor $cursor
-     * @param int $currentLineNumber
-     *
-     * @return $this
+     * @param bool $blank
      */
-    public function setLastLineBlank(Cursor $cursor, $currentLineNumber)
+    public function setLastLineBlank($blank)
     {
-        parent::setLastLineBlank($cursor, $currentLineNumber);
+        parent::setLastLineBlank($blank);
 
-        $this->lastLineBlank = false;
+        $this->lastLineBlank = $blank;
     }
 }

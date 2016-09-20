@@ -17,11 +17,11 @@ class MarkuaExtension extends CommonMarkCoreExtension {
             new BlockParser\BlockQuoteParser(),
             new MarkuaBlockParser\AsideParser(),
             new MarkuaBlockParser\IconBlockParser(),
-            new BlockParser\ATXHeaderParser(),
+            new BlockParser\ATXHeadingParser(),
             new BlockParser\FencedCodeParser(),
             new BlockParser\HtmlBlockParser(),
-            new BlockParser\SetExtHeaderParser(),
-            new BlockParser\HorizontalRuleParser(),
+            new BlockParser\SetExtHeadingParser(),
+            new BlockParser\ThematicBreakParser(),
             new BlockParser\ListParser(),
         );
     }

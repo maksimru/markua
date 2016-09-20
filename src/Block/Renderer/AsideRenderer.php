@@ -17,6 +17,7 @@ namespace League\Markua\Block\Renderer;
 
 use League\CommonMark\Block\Element\AbstractBlock;
 use League\CommonMark\Block\Renderer\BlockRendererInterface;
+use League\CommonMark\ElementRendererInterface;
 use League\CommonMark\HtmlElement;
 use League\CommonMark\HtmlRenderer;
 use League\Markua\Block\Element\Aside;
@@ -30,7 +31,7 @@ class AsideRenderer implements BlockRendererInterface
      *
      * @return HtmlElement
      */
-    public function render(AbstractBlock $block, HtmlRenderer $htmlRenderer, $inTightList = false)
+    public function render(AbstractBlock $block, ElementRendererInterface $htmlRenderer, $inTightList = false)
     {
         if (!($block instanceof Aside)) {
             throw new \InvalidArgumentException('Incompatible block type: ' . get_class($block));
